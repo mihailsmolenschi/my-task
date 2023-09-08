@@ -1,0 +1,12 @@
+{
+  "name": "my-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd technical-task && npm i | cd ../server && npm i",
+    "dev": "cd technical-task && ng serve | node ../server/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
