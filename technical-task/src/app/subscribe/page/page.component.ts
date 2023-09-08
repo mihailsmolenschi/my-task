@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { ExampleService } from 'src/app/example.service';
 
 import { AreaWithThings } from 'src/app/interfaces/AreaWithThings';
@@ -7,15 +7,16 @@ import { AreaWithThings } from 'src/app/interfaces/AreaWithThings';
   selector: 'app-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css'],
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PageComponent {
-  AreaWithThings: AreaWithThings[] = [];
+  areaWithThings: AreaWithThings[] = [];
 
   constructor(private exampleService: ExampleService) {}
   ngOnInit(): void {
     this.exampleService.getAreasWithThings().subscribe((data) => {
-      this.AreaWithThings = data;
-      console.log(this.AreaWithThings);
+      this.areaWithThings = data;
+      console.log(this.areaWithThings);
     });
   }
 }

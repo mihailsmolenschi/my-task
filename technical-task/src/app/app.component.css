@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+
+  margin: 20px;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+a {
+  color: #eee;
+}
