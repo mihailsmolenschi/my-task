@@ -1,0 +1,11 @@
+<!-- {{ thing | json }} -->
+
+<div class="card" *ngFor="let t of thing">
+  <span
+    class="{{ !t.joinedWith && 'badge' }} {{
+      t.status === 'open' ? 'green' : 'red'
+    }}"
+  ></span>
+  <span class="number">{{ t.sku }}</span>
+  <span class="counter">{{ t.defaultSku }}</span>
+</div>

@@ -1,5 +1,10 @@
-<ul>
-  <li *ngFor="let thing of AreaWithThings">
-    {{ thing.name }}
-  </li>
-</ul>
+<main>
+  <div class="container" *ngFor="let areas of AreaWithThings">
+    <h2>{{ areas.name }}</h2>
+
+    <app-card-list
+      class="card-container"
+      [things]="areas.things"
+    ></app-card-list>
+  </div>
+</main>

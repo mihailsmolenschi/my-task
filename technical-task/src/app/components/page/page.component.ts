@@ -15,6 +15,7 @@ export class PageComponent {
   ngOnInit(): void {
     this.exampleService.getAreasWithThings().subscribe((data) => {
       this.AreaWithThings = data;
+      console.log(this.AreaWithThings);
     });
   }
 }

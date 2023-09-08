@@ -1,0 +1,56 @@
+.card {
+  position: relative;
+
+  width: 120px;
+  height: 70px;
+
+  background-color: #2b4e87;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:not(:last-child):after {
+  content: "";
+  width: 10px;
+  height: 55px;
+
+  position: absolute;
+  right: -10px;
+
+  background-color: #203d74;
+}
+
+.number {
+  font-size: 24px;
+}
+
+.counter {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  font-size: 14px;
+}
+
+.badge {
+  width: 5px;
+  height: 50px;
+  border-radius: 0 5px 5px 0;
+  left: 0px;
+  position: absolute;
+}
+
+.orange {
+  background-color: #ff9800;
+}
+
+.green {
+  background-color: #f4e700;
+}
+
+.red {
+  background-color: #f64d25;
+}

@@ -1,0 +1,23 @@
+h2 {
+  margin-left: 10px;
+  margin-bottom: 6px;
+
+  font-weight: 400;
+  font-size: 16px;
+}
+
+main {
+  margin: 10px;
+}
+
+.container {
+  margin-bottom: 25px;
+}
+
+.card-container {
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
