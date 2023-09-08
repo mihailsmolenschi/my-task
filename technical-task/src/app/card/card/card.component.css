@@ -1,25 +1,20 @@
 .card {
   position: relative;
-
   width: 120px;
   height: 70px;
-
   background-color: #2b4e87;
   border-radius: 5px;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card:not(:last-child):after {
+.card:not(:last-child)::after {
   content: "";
   width: 10px;
   height: 55px;
-
   position: absolute;
   right: -10px;
-
   background-color: #203d74;
 }
 
@@ -31,7 +26,6 @@
   position: absolute;
   right: 8px;
   top: 8px;
-
   font-size: 14px;
 }
 
@@ -39,7 +33,7 @@
   width: 5px;
   height: 50px;
   border-radius: 0 5px 5px 0;
-  left: 0px;
+  left: 0;
   position: absolute;
 }
 
