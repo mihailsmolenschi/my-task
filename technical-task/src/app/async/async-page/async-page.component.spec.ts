@@ -8,7 +8,7 @@ describe('AsyncPageComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AsyncPageComponent]
+      declarations: [AsyncPageComponent],
     });
     fixture = TestBed.createComponent(AsyncPageComponent);
     component = fixture.componentInstance;

@@ -51,7 +51,7 @@ export class ExampleService {
         }
 
         return areaWithThings;
-      })
+      }),
     );
   }
 }
