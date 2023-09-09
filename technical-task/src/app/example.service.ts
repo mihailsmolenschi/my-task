@@ -22,32 +22,33 @@ export class ExampleService {
 
   getAreasWithThings() {
     return forkJoin([this.getThings(), this.getAreas()]).pipe(
-      map((array) => {
+      map((thingsAndAreas) => {
         const areaWithThings: AreaWithThings[] = [];
 
-        const [things, areas] = array;
+        const [things, areas] = thingsAndAreas;
 
-        const joinedThingsArr = [];
-        for (const a of things) {
-          if (a.joinedWith !== null) continue;
+        const joinedThings: Thing[][] = [];
+        for (const thing of things) {
+          if (thing.joinedWith !== null) continue;
 
-          const accumulatorArr = [];
-          accumulatorArr.push(a);
+          const accumulator: Thing[] = [];
+          accumulator.push(thing);
 
-          for (const b of things) {
-            if (a.id === b.joinedWith) accumulatorArr.push(b);
+          for (const item of things) {
+            if (thing.id === item.joinedWith) accumulator.push(item);
           }
 
-          joinedThingsArr.push(accumulatorArr);
+          joinedThings.push(accumulator);
         }
 
         for (const area of areas) {
-          const newThingsArr = [];
+          const newThings: Thing[][] = [];
 
-          for (const array of joinedThingsArr) {
-            if (area.areaId === array[0].areaId) newThingsArr.push(array);
+          for (const things of joinedThings) {
+            const firstThing: Thing = things[0];
+            if (area.areaId === firstThing.areaId) newThings.push(things);
           }
-          areaWithThings.push({ ...area, things: newThingsArr });
+          areaWithThings.push({ ...area, things: newThings });
         }
 
         return areaWithThings;
