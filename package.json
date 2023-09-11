@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install": "cd technical-task && npm i | cd ../server && npm i",
-    "dev": "cd technical-task && ng serve | node ../server/app.js"
+    "i": "npm i && cd ./server && npm i && cd ../technical-task && npm i",
+    "server": "cd server && node app.js",
+    "app": "cd technical-task && ng serve",
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run app\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
 }

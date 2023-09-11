@@ -3,7 +3,7 @@
 To install app dependencies and to run it from the main folder use these steps:
 1. Install the npm dependencies
 
-    `npm run install`
+    `npm run i`
   
 3. Run the app
 
